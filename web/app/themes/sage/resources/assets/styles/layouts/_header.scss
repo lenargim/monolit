@@ -1,0 +1,60 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 1vw 0 1vw 0;
+
+  &__logo {
+    width: 10vw;
+    line-height: 1;
+  }
+
+  &__phone {
+    background-color: $brown;
+    width: 100%;
+    max-width: 20vw;
+    font-size: $f21;
+    position: absolute;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    padding-left: 1vw;
+    padding-bottom: 1vw;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    &-number {
+      color: #fff;
+      line-height: 1;
+      font-weight: 300;
+    }
+
+    &-svg {
+      width: $f21;
+      height: $f21;
+      margin-right: 1vw;
+    }
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.menu-item {
+  text-transform: uppercase;
+  margin: 0 0.5vw;
+  line-height: 1;
+  font-size: $f21;
+  font-weight: 300;
+  white-space: nowrap;
+}
+
+.current-menu-item a {
+  color: $blue;
+  text-decoration: underline;
+  text-decoration-color: $brown;
+}

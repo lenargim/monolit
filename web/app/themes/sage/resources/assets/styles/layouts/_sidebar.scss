@@ -1,0 +1,69 @@
+.sidebar {
+  width: 29vw;
+  background-color: $graybg;
+  padding: 1.5vw 2vw;
+  box-sizing: border-box;
+
+  &__title {
+    color: $black;
+    text-transform: uppercase;
+    display: block;
+    border-bottom: 1px solid rgba(26, 24, 24, 0.3);
+    padding: 5px 0;
+    cursor: pointer;
+  }
+
+  &__block {
+    display: none;
+  }
+
+  &__li {
+    margin-bottom: 45px;
+    position: relative;
+
+    &.active {
+      &::after {
+        transform: rotate(180deg);
+      }
+
+      & .sidebar__title {
+        color: $brown;
+      }
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      width: 20px;
+      height: 20px;
+      position: absolute;
+      background: url("../icons/sidebar-arrow.svg") no-repeat center center;
+      right: 0;
+      top: 0;
+      transition: all 0.2s ease;
+    }
+  }
+
+  &__sublist {
+    padding-top: 30px;
+  }
+
+  &__subli {
+    margin-left: 1em;
+    margin-bottom: 10px;
+    list-style-type: disc;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 200;
+    text-transform: lowercase;
+
+    .open {
+      font-weight: 400;
+      color: $brown;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

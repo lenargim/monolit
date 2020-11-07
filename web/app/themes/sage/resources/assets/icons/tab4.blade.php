@@ -1,0 +1,12 @@
+<svg class="{{ $class or '' }}" xmlns="http://www.w3.org/2000/svg" width="114.787" height="67.347" viewBox="0 0 114.787 67.347">
+  <g id="Сгруппировать_141" data-name="Сгруппировать 141" transform="translate(-164.519 -2553.907)">
+    <path id="Контур_1368" data-name="Контур 1368" d="M254.351,2587.579a32.439,32.439,0,1,0-32.439,32.442A32.439,32.439,0,0,0,254.351,2587.579Z" fill="none" stroke="#e29730" stroke-miterlimit="10" stroke-width="2.4"/>
+    <path id="Контур_1369" data-name="Контур 1369" d="M235.46,2572.878a20,20,0,0,0-31.66,23.178" fill="none" stroke="#e29730" stroke-miterlimit="10" stroke-width="2.4"/>
+    <path id="Контур_1370" data-name="Контур 1370" d="M208.709,2602.593a20,20,0,0,0,32.123-21.492" fill="none" stroke="#e29730" stroke-miterlimit="10" stroke-width="2.4"/>
+    <path id="Контур_1371" data-name="Контур 1371" d="M201.673,2604.69l10.34-13.023,5.1,3.514,6.613-9.146,5.223,3.885,14.4-18.875" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.4"/>
+    <line id="Линия_13" data-name="Линия 13" x2="3.725" y2="0.275" transform="translate(239.632 2570.769)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.4"/>
+    <line id="Линия_14" data-name="Линия 14" x2="0.82" y2="4.205" transform="translate(243.357 2571.044)" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.4"/>
+    <path id="Контур_1372" data-name="Контур 1372" d="M221.912,2620.021s-30.836,1.5-55.9-32.442c25.065-33.943,55.9-32.439,55.9-32.439" fill="none" stroke="#e29730" stroke-miterlimit="10" stroke-width="2.4"/>
+    <path id="Контур_1373" data-name="Контур 1373" d="M221.912,2620.021s30.837,1.5,55.9-32.442c-25.066-33.943-55.9-32.439-55.9-32.439" fill="none" stroke="#e29730" stroke-miterlimit="10" stroke-width="2.4"/>
+  </g>
+</svg>

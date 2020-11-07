@@ -1,0 +1,48 @@
+.contacts {
+  padding: 45px 0;
+  background-color: $graybg;
+
+  &__wrap {
+    padding-top: 45px;
+  }
+
+  &__block {
+    padding: 45px 0;
+    border-bottom: 1px solid $brown;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+  }
+
+  &__info,
+  &__map {
+    width: 49%;
+  }
+
+  &__logo {
+    max-height: 100px;
+    margin-bottom: 45px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding-bottom: 45px;
+  }
+
+  &__icon {
+    margin-right: 60px;
+    width: 50px;
+  }
+
+  &__title {
+    font-size: 20px;
+    padding-bottom: 0.5em;
+  }
+
+  &__data {
+    font-size: 20px;
+    font-weight: 200;
+  }
+}

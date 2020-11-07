@@ -1,0 +1,278 @@
+.practices-block {
+  padding: 30px 0;
+  color: #fff;
+  background-image: url("../images/tabs.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+  position: relative;
+
+  & .title {
+    position: relative;
+    z-index: 1;
+  }
+
+  &::before {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    width: 30vw;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $bgblue;
+  }
+
+  &::after {
+    z-index: 0;
+    content: "";
+    position: absolute;
+    width: 70vw;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $bgblue;
+    opacity: 0.7;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: stretch;
+    height: 100%;
+    justify-content: flex-start;
+    padding-top: 90px;
+    position: relative;
+  }
+
+  &__tabs {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: calc(30% - 20px);
+
+    @media screen and (max-width: $desktop) {
+      max-width: calc(30% - 1px);
+    }
+  }
+
+  &__tab {
+    text-transform: uppercase;
+    font-size: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+    padding: 10px;
+    background: rgba(139, 209, 244, 0.3);
+    box-sizing: border-box;
+    width: 80%;
+    border-left: 1px solid #fff;
+    transition: all 0.2s ease;
+    cursor: pointer;
+
+    &.active {
+      width: 100%;
+      border-left: 1px solid $gold;
+    }
+  }
+
+  &__contentbox {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+    padding-left: 13%;
+  }
+
+  &__content {
+    display: none;
+    width: 100%;
+    height: 100%;
+
+    &.active {
+      display: block;
+    }
+  }
+
+  &__contentmain {
+    position: relative;
+
+    &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      left: -20px;
+      top: 0;
+      background: $gold;
+      z-index: 1;
+    }
+  }
+
+  &__heading {
+    color: $gold;
+    padding-bottom: 1em;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    text-transform: lowercase;
+    font-size: 18px;
+    font-weight: 300;
+    max-width: 30vw;
+
+    li {
+      list-style-type: disc;
+      margin-left: 1em;
+    }
+  }
+
+  &__button {
+    margin-top: 100px;
+  }
+}
+
+.tab-logo {
+  max-width: 85px;
+  max-height: 85px;
+  margin-right: 15px;
+  width: 100%;
+}
+
+.practices-content {
+  &__wrap {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  &__main {
+    padding: 45px 0;
+    width: 71vw;
+
+    .title {
+      margin: 0 auto 60px;
+    }
+  }
+
+  &__loop {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+    justify-content: flex-start;
+    padding: 0 45px;
+  }
+
+  &__logo {
+    width: 105px;
+    height: 105px;
+    overflow: hidden;
+    margin: 0 auto 30px;
+  }
+
+  &__item {
+    width: calc(50% - 15px);
+    position: relative;
+    padding: 0 45px;
+    display: block;
+    margin-bottom: 60px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 100%;
+      background-color: $brown;
+      display: block;
+      top: 0;
+      left: 0;
+    }
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 31px;
+    line-height: 40px;
+    font-weight: 300;
+    text-transform: uppercase;
+    border-bottom: 1px solid $brown;
+    min-height: 80px;
+  }
+
+  &__sublist {
+    padding-top: 30px;
+    margin-inline-start: 2em;
+  }
+
+  &__li {
+    list-style-type: disc;
+    font-size: 20px;
+    font-weight: 200;
+    padding-bottom: 15px;
+  }
+}
+
+.single-practices {
+  &__wrap {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  &__main {
+    width: 71vw;
+    padding: 45px;
+  }
+
+  &__content {
+    padding-top: 45px;
+    font-size: 27px;
+    font-weight: 200;
+    font-style: italic;
+    padding-bottom: 1em;
+
+    ul {
+      padding: 1em 0;
+      margin-inline-start: 1em;
+    }
+
+    li {
+      list-style-type: disc;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 300;
+    padding-bottom: 1em;
+  }
+
+  &__arrow {
+    width: 27px;
+    height: 27px;
+    cursor: pointer;
+    margin: 0 auto 30px;
+    transition: all 0.2s ease;
+  }
+
+  &__desc {
+    display: none;
+    font-size: 20px;
+    font-weight: 200;
+    padding-bottom: 1em;
+  }
+
+  &__item.active {
+    .single-practices__arrow {
+      transform: rotate(180deg);
+    }
+  }
+}
