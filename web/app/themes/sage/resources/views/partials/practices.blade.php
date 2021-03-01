@@ -3,30 +3,41 @@
   <div class="container container_big">
     <div class="practices-block__wrap">
       <div class="practices-block__tabs">
-        <div class="practices-block__tab">@include('icon::tab1', ['class' => 'tab-logo'])<span>Регистрация компаний</span>
-        </div>
-        <div class="practices-block__tab">@include('icon::tab2', ['class' => 'tab-logo'])<span>Судебная защита</span></div>
-        <div class="practices-block__tab">@include('icon::tab3', ['class' => 'tab-logo'])<span>Совершение сделок</span></div>
-        <div class="practices-block__tab">@include('icon::tab4', ['class' => 'tab-logo'])<span>Аудит и оценка</span></div>
-        <div class="practices-block__tab">@include('icon::tab5', ['class' => 'tab-logo'])<span>Бизнес консалтинг</span></div>
+        @php
+          global $post;
+            $args = [
+              'post_type' => 'practices',
+              'numberposts' => -1,
+              'published' => true,
+              'orderby' => 'date',
+              'order' => 'asc'
+            ];
+            $categories = get_posts($args)
+        @endphp
+        @foreach($categories as $post)
+          @php setup_postdata($post) @endphp
+          <div class="practices-block__tab"><img src="@php the_post_thumbnail_url() @endphp" class="tab-logo">
+            <span>@php the_title() @endphp</span></div>
+        @endforeach
       </div>
       <div class="practices-block__contentbox">
+        @foreach($categories as $post)
         <div class="practices-block__content">
-          <div class="practices-block__contentmain">
-            <div class="practices-block__heading">РЕГИСТРАЦИЯ КОМПАНИЙ В РОССИИ</div>
-            <div class="practices-block__text">
-              <ul>
-                <li>консультации по вопросам регистрации юридических лиц и индивидуальных предпринимателей;</li>
-                <li>оформление необходимой документации и сопровождение регистрации;</li>
-                <li>открытие представительств и филиалов иностранных компаний.</li>
-              </ul>
+            <div class="practices-block__contentmain">
+              <div class="practices-block__heading">{{ the_title() }}</div>
+              <div class="practices-block__text">
+                @while ( have_rows('mainpage') ) @php the_row() @endphp
+                <ul>
+                  <li>@php the_sub_field('item') @endphp;</li>
+                </ul>
+                @endwhile
+              </div>
+              <a href="@php the_permalink() @endphp" class="button button_gold practices-block__button">Подробнее</a>
             </div>
-          </div>
-          <a href="/practices-block" class="button button_gold practices-block__button">Подробнее</a>
         </div>
-        <div class="practices-block__content">content2</div>
-        <div class="practices-block__content">content3</div>
+        @endforeach
       </div>
     </div>
   </div>
+  @php wp_reset_postdata() @endphp
 </div>

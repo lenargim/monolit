@@ -25,3 +25,6 @@ web/.htaccess
 wp-cli.local.yml
 
 web/app/themes/sage/node_modules
+
+.idea/encodings.xml
+.idea/vcs.xml

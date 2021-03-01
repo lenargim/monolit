@@ -1,7 +1,6 @@
 @extends('layouts.app')
 @section('content')
   @php setPostViews(get_the_ID()) @endphp
-  @include('partials.banner')
   {{--  @php echo getPostViews((int)get_the_ID()) @endphp--}}
 
   <div class="news-single">
@@ -19,20 +18,6 @@
           @endif
           <div class="news-content__text">{{ the_content() }}</div>
         </div>
-        <div class="news-content__socials socials">
-          <a class="social" href="//@php the_field( "facebook", 22 ) @endphp"><img src="@asset('images/facebook.svg')"
-                                                                                   alt="facebook"></a>
-          <a class="social" href="//@php the_field( "vk", 22 ) @endphp"><img src="@asset('images/vk.svg')"
-                                                                             alt="vk"></a>
-          <a class="social" href="//@php the_field( "ok", 22 ) @endphp"><img src="@asset('images/ok.svg')"
-                                                                             alt="ok"></a>
-          <a class="social" href="//@php the_field( "twitter", 22 ) @endphp"><img src="@asset('images/twitter.svg')"
-                                                                                  alt="twitter"></a>
-          <a class="social" href="//@php the_field( "instagram", 22 ) @endphp"><img
-              src="@asset('images/instagram.svg')"
-              alt="instagram"></a>
-        </div>
-        <a href="{{the_permalink()}}" class="news-content__button">Подробне >></a>
       </div>
     </div>
   </div>

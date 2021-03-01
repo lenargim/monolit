@@ -119,7 +119,7 @@ function excerpt($limit, $read_more_type) {
 
 add_action('init', 'my_custom_team');
 function my_custom_team(){
-    register_post_type('team', array(
+    register_post_type('team-type', array(
         'labels'             => array(
             'name'               => 'Команда', // Основное название типа записи
             'singular_name'      => 'Член команды', // отдельное название записи типа Book
@@ -133,7 +133,7 @@ function my_custom_team(){
             'not_found_in_trash' => 'В корзине не найдено члена команды',
             'parent_item_colon'  => '',
             'menu_name'          => 'Команда',
-            'menu_icon'          => 'dashicons-admin-users',
+            'menu_icon'          => 'dashicons-businessman',
 
         ),
         'public'             => true,
@@ -300,3 +300,11 @@ function do_this_daily() {
 }
 add_action('my_daily_event', 'do_this_daily', 10, 2);
 
+add_filter( 'upload_mimes', 'svg_upload_allow' );
+
+# Добавляет SVG в список разрешенных для загрузки файлов.
+function svg_upload_allow( $mimes ) {
+    $mimes['svg']  = 'image/svg+xml';
+
+    return $mimes;
+}

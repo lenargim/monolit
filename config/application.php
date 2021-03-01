@@ -23,7 +23,7 @@ $root_dir = dirname(__DIR__);
  *
  * @var string
  */
-$webroot_dir = $root_dir . '/web';
+$webroot_dir = $root_dir . '/http';
 
 /**
  * Use Dotenv to set required environment variables and load .env file in root
@@ -57,15 +57,26 @@ Config::define('WP_CONTENT_DIR', $webroot_dir . Config::get('CONTENT_DIR'));
 Config::define('WP_CONTENT_URL', Config::get('WP_HOME') . Config::get('CONTENT_DIR'));
 
 /**
- * DB settings
- */
-Config::define('DB_NAME', env('DB_NAME'));
-Config::define('DB_USER', env('DB_USER'));
-Config::define('DB_PASSWORD', env('DB_PASSWORD'));
-Config::define('DB_HOST', env('DB_HOST') ?: 'localhost');
+//  * DB settings
+//  */
+// Config::define('DB_NAME', env('DB_NAME'));
+// Config::define('DB_USER', env('DB_USER'));
+// Config::define('DB_PASSWORD', env('DB_PASSWORD'));
+// Config::define('DB_HOST', env('DB_HOST') ?: 'localhost');
+// Config::define('DB_CHARSET', 'utf8mb4');
+// Config::define('DB_COLLATE', '');
+// $table_prefix = env('DB_PREFIX') ?: 'wp_';
+
+Config::define('DB_NAME', 'gb_monolit_t');
+Config::define('DB_USER', 'gb_monolit_t');
+Config::define('DB_PASSWORD', '8c7e7ea9ziw');
+Config::define('DB_HOST', 'mysql100.1gb.ru' ?: 'localhost');
 Config::define('DB_CHARSET', 'utf8mb4');
 Config::define('DB_COLLATE', '');
 $table_prefix = env('DB_PREFIX') ?: 'wp_';
+
+
+
 
 if (env('DATABASE_URL')) {
     $dsn = (object) parse_url(env('DATABASE_URL'));
@@ -128,3 +139,4 @@ Config::apply();
 if (!defined('ABSPATH')) {
     define('ABSPATH', $webroot_dir . '/wp/');
 }
+

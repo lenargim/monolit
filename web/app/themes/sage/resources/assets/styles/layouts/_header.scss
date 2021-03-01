@@ -33,7 +33,95 @@
     &-svg {
       width: $f21;
       height: $f21;
+      fill: #fff;
       margin-right: 1vw;
+    }
+
+    @media screen and (max-width: $tablet) {
+      background-color: transparent;
+      position: relative;
+      font-size: 20px;
+      white-space: nowrap;
+      max-width: unset;
+
+      &-number {
+        display: block;
+        width: 100%;
+        font-weight: 500;
+        color: $brown;
+        line-height: 1;
+        text-align: center;
+      }
+
+      &-svg {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__close {
+      display: flex;
+      width: 30px;
+      height: 24px;
+      position: absolute;
+      right: 0;
+      top: 25px;
+
+      &-line {
+        position: absolute;
+        background-color: $brown;
+        width: 100%;
+        height: 3px;
+        left: 0;
+        transform-origin: left;
+        transition: all 0.3s ease;
+
+        &:nth-of-type(1) {
+          top: 0;
+        }
+
+        &:nth-of-type(2) {
+          top: calc(50% - 1px);
+        }
+
+        &:nth-of-type(3) {
+          bottom: 0;
+        }
+      }
+    }
+
+    &__logo {
+      width: 120px;
+    }
+
+    & .nav-primary,
+    &__phone {
+      display: none;
+    }
+
+    &__phone {
+      padding-bottom: 20px;
+    }
+  }
+
+  &.active {
+    .header__close-line {
+      &:nth-of-type(1) {
+        transform: rotate(45deg);
+      }
+
+      &:nth-of-type(2) {
+        display: none;
+      }
+
+      &:nth-of-type(3) {
+        transform: rotate(-45deg);
+      }
     }
   }
 }
@@ -42,6 +130,19 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &-primary {
+    margin-right: 20vw;
+  }
+
+  @media screen and (max-width: $tablet) {
+    flex-direction: column;
+    justify-content: center;
+
+    &-primary {
+      margin: 2em 0 0;
+    }
+  }
 }
 
 .menu-item {
@@ -51,6 +152,11 @@
   font-size: $f21;
   font-weight: 300;
   white-space: nowrap;
+
+  @media screen and (max-width: $tablet) {
+    font-size: 20px;
+    margin-bottom: 0.7em;
+  }
 }
 
 .current-menu-item a {

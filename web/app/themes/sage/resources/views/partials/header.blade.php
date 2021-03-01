@@ -1,6 +1,11 @@
 <header>
   <div class="container container_big">
     <div class="header">
+      <div class="header__close hidden">
+        <div class="header__close-line"></div>
+        <div class="header__close-line"></div>
+        <div class="header__close-line"></div>
+      </div>
       <a class="header__logo" href="{{ home_url('/') }}">@include('icon::logo', ['class' => 'logo'])</a>
       <nav class="nav-primary">
         @if (has_nav_menu('primary_navigation'))

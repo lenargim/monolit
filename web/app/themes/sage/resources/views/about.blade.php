@@ -5,7 +5,6 @@ Template Name: О нас
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.banner')
   <div class="about-content">
     <div class="container container_small">
       <div class="title">{{ the_title() }}</div>

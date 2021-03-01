@@ -13,14 +13,16 @@
           @endif
           <h2 class="banner__title">@php the_sub_field('title') @endphp</h2>
           <p class="banner__desc">@php the_sub_field('desc') @endphp</p>
-          <a class="banner__file" target="_blank" href="@php the_sub_field('file') @endphp">Download presentation</a>
+          @if(get_sub_field('button-bool'))
+            <a class="banner__file" target="_blank" href="@php the_sub_field('file') @endphp">Download presentation</a>
+          @endif
         </div>
       </div>
-      <div class="banner__bg img">
+      <div class="banner__bg">
         @if(get_sub_field('img-bool'))
           <img src="@php the_sub_field('img') @endphp" alt="banner">
         @else
-          <img src='@asset("images/banner.jpg")' alt="banner">
+          <img src='@asset("images/banner1.jpg")' alt="banner">
         @endif
       </div>
     </div>

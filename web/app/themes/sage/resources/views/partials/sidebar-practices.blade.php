@@ -15,7 +15,7 @@
     <ul>
       @foreach($practices as $post)
         @php setup_postdata($post) @endphp
-        <li class="sidebar__li">
+        <li class="sidebar__li" data-path="@php echo wp_make_link_relative( the_permalink() ) @endphp">
           <div class="sidebar__title">{{ the_title() }}</div>
           <div class="sidebar__block">
             @php

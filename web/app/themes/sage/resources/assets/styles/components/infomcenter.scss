@@ -14,6 +14,10 @@
   &__slider.slick-slider {
     margin: 150px -15px 0;
 
+    @media screen and (max-width: $tablet) {
+      margin: 100px -15px 0;
+    }
+
     .slick-slide {
       padding: 0 15px;
     }
@@ -21,6 +25,10 @@
     .slick-dots {
       bottom: unset;
       top: -100px;
+
+      @media screen and (max-width: $tablet) {
+        top: -80px;
+      }
 
       li button::before {
         border: 1px solid #0063b0;
@@ -94,28 +102,51 @@
 
   &__button {
     margin: 100px auto 0;
+
+    @media screen and (max-width: $tablet) {
+      margin: 40px auto 0;
+    }
   }
 }
 
 .news-content {
   &__wrap {
     display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
     justify-content: flex-start;
+    width: 100vw;
   }
 
   &__main {
     padding: 45px 0;
     width: 71vw;
 
+    @media screen and (max-width: $laptop) {
+      width: 100%;
+      padding: 45px 30px;
+    }
+
+    @media screen and (max-width: $tablet) {
+      padding: 30px 15px;
+    }
+
     .title {
       margin: 0 auto 60px;
+
+      @media screen and (max-width: $tablet) {
+        margin: 0 auto 30px;
+      }
     }
   }
 
   &__loop {
     display: block;
     padding: 0 45px;
+
+    @media screen and (max-width: $laptop) {
+      padding: 0;
+    }
   }
 
   &__item {
@@ -137,19 +168,35 @@
     font-weight: 300;
     padding-bottom: 20px;
     border-bottom: 1px solid rgba(26, 24, 24, 0.3);
+
+    @media screen and (max-width: $desktop) and (min-width: 376px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 22px;
+    }
   }
 
   &__box {
     display: block;
     width: 100%;
+    min-height: 230px;
     padding: 30px 0;
   }
 
   &__img {
     max-width: 320px;
+    max-height: 230px;
     margin-right: 15px;
     margin-bottom: 15px;
     float: left;
+
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+      margin: 0 auto 30px;
+      float: none;
+    }
   }
 
   &__text {
@@ -184,14 +231,25 @@
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100vw;
   }
 
   &__main {
     padding: 45px;
     width: 71vw;
 
+    @media screen and (max-width: $laptop) {
+      width: 100vw;
+      padding: 45px 15px;
+    }
+
     .title {
       margin: 0 auto 60px;
+
+      @media screen and (max-width: $laptop) {
+        margin: 0 auto 45px;
+      }
     }
   }
 }

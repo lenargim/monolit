@@ -1,7 +1,6 @@
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.banner')
   <div class="single-practices">
     <div class="single-practices__wrap">
       @include('partials.sidebar-practices')

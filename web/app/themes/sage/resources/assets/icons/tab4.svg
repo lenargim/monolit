@@ -1,4 +1,4 @@
-<svg class="{{ $class or '' }}" xmlns="http://www.w3.org/2000/svg" width="114.787" height="67.347" viewBox="0 0 114.787 67.347">
+<svg xmlns="http://www.w3.org/2000/svg" width="114.787" height="67.347" viewBox="0 0 114.787 67.347">
   <g id="Сгруппировать_141" data-name="Сгруппировать 141" transform="translate(-164.519 -2553.907)">
     <path id="Контур_1368" data-name="Контур 1368" d="M254.351,2587.579a32.439,32.439,0,1,0-32.439,32.442A32.439,32.439,0,0,0,254.351,2587.579Z" fill="none" stroke="#e29730" stroke-miterlimit="10" stroke-width="2.4"/>
     <path id="Контур_1369" data-name="Контур 1369" d="M235.46,2572.878a20,20,0,0,0-31.66,23.178" fill="none" stroke="#e29730" stroke-miterlimit="10" stroke-width="2.4"/>

@@ -24,7 +24,7 @@
 
     $all_args = [
       'orderby' => 'date',
-      'posts_per_page' => 10,
+      'posts_per_page' => 3,
       'post_status' => 'publish',
       'order' => 'DESC',
       'category_name' => 'news-ru',

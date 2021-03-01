@@ -9,5 +9,4 @@ Template Name: Главная
   @include('partials.about')
   @include('partials.practices')
   @include('partials.informcenter')
-  @include('partials.team')
 @endsection

@@ -19,6 +19,7 @@
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/assets/styles/layouts/_header.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/assets/styles/layouts/_sidebar.scss" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/assets/styles/main.scss" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/404.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/about.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/contacts.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/index.blade.php" charset="UTF-8" />
@@ -28,6 +29,7 @@
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/page.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/partials/about.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/partials/banner.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/partials/content-search.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/partials/footer-en.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/partials/footer.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/partials/header.blade.php" charset="UTF-8" />
@@ -37,6 +39,7 @@
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/partials/sidebar-practices.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/partials/team.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/practices.blade.php" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/search.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/single-practices.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/single.blade.php" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/web/app/themes/sage/resources/views/team.blade.php" charset="UTF-8" />

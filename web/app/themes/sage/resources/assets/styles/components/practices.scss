@@ -21,6 +21,12 @@
     top: 0;
     bottom: 0;
     background-color: $bgblue;
+
+    @media screen and (max-width: $laptop) {
+      width: 100%;
+      height: 200px;
+      bottom: unset;
+    }
   }
 
   &::after {
@@ -33,31 +39,49 @@
     bottom: 0;
     background-color: $bgblue;
     opacity: 0.7;
+
+    @media screen and (max-width: $laptop) {
+      width: 100%;
+    }
   }
 
   &__wrap {
     display: flex;
     align-items: stretch;
+    width: 100%;
     height: 100%;
     justify-content: flex-start;
     padding-top: 90px;
     position: relative;
+
+    @media screen and (max-width: $laptop) {
+      padding-top: 45px;
+      flex-direction: column;
+    }
   }
 
   &__tabs {
     position: relative;
     z-index: 1;
     width: 100%;
-    max-width: calc(30% - 20px);
+    max-width: 28.66vw;
 
-    @media screen and (max-width: $desktop) {
-      max-width: calc(30% - 1px);
+    @media screen and (max-width: $desktop) and (min-width: $laptop) {
+      max-width: calc(30vw - 30px);
+    }
+
+    @media screen and (max-width: $laptop) {
+      max-width: 100%;
+      padding-bottom: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      overflow-x: auto;
     }
   }
 
   &__tab {
     text-transform: uppercase;
-    font-size: 21px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
@@ -70,19 +94,39 @@
     transition: all 0.2s ease;
     cursor: pointer;
 
+    @media screen and (max-width: $laptop) {
+      width: auto;
+      margin: 0 10px 0 0;
+      white-space: nowrap;
+      font-size: 12px;
+      padding: 5px;
+      border: 0.5px solid #fff;
+    }
+
     &.active {
       width: 100%;
       border-left: 1px solid $gold;
+
+      @media screen and (max-width: $laptop) {
+        border: 0.5px solid $gold;
+      }
     }
   }
 
   &__contentbox {
     display: flex;
+    box-sizing: border-box;
     width: 100%;
+    max-width: calc(( 100vw - 60px ) * 0.7);
     height: 100%;
     position: relative;
     z-index: 1;
     padding-left: 13%;
+
+    @media screen and (max-width: $laptop) {
+      padding: 45px 0 0;
+      max-width: unset;
+    }
   }
 
   &__content {
@@ -95,8 +139,10 @@
     }
   }
 
-  &__contentmain {
+  &__heading,
+  &__text {
     position: relative;
+    font-size: 18px;
 
     &::before {
       content: "";
@@ -114,15 +160,17 @@
   &__heading {
     color: $gold;
     padding-bottom: 1em;
-    font-size: 18px;
     text-transform: uppercase;
   }
 
   &__text {
     text-transform: lowercase;
-    font-size: 18px;
     font-weight: 300;
     max-width: 30vw;
+
+    @media screen and (max-width: $laptop) {
+      max-width: 100%;
+    }
 
     li {
       list-style-type: disc;
@@ -140,6 +188,12 @@
   max-height: 85px;
   margin-right: 15px;
   width: 100%;
+
+  @media screen and (max-width: $laptop) {
+    width: 35px;
+    height: 35px;
+    margin-right: 5px;
+  }
 }
 
 .practices-content {
@@ -147,14 +201,26 @@
     display: flex;
     align-items: stretch;
     justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100vw;
   }
 
   &__main {
+    box-sizing: border-box;
     padding: 45px 0;
     width: 71vw;
 
+    @media screen and (max-width: $laptop) {
+      padding: 30px 0;
+      width: 100%;
+    }
+
     .title {
       margin: 0 auto 60px;
+
+      @media screen and (max-width: $tablet) {
+        margin: 0 auto 45px;
+      }
     }
   }
 
@@ -164,13 +230,51 @@
     align-items: stretch;
     justify-content: flex-start;
     padding: 0 45px;
+
+    @media screen and (max-width: $laptop) {
+      padding: 0 15px;
+    }
   }
 
   &__logo {
+    position: relative;
     width: 105px;
     height: 105px;
-    overflow: hidden;
     margin: 0 auto 30px;
+    background-color: $blue;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media screen and (max-width: $desktop) {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 60px;
+      height: 60px;
+      background: url("../images/frame.png") no-repeat center center;
+      position: absolute;
+      top: -10px;
+      left: -10px;
+
+      @media screen and (max-width: $desktop) {
+        width: 55px;
+        height: 55px;
+        top: -9px;
+        left: -9px;
+      }
+    }
+
+    img {
+      width: 85%;
+      padding: 15px;
+    }
   }
 
   &__item {
@@ -189,21 +293,52 @@
       display: block;
       top: 0;
       left: 0;
+
+      @media screen and (max-width: $desktop) {
+        width: 4px;
+      }
+
+      @media screen and (max-width: 375px) {
+        content: unset;
+      }
     }
 
     &:nth-child(odd) {
       margin-right: 30px;
     }
+
+    @media screen and (max-width: $laptop) {
+      padding: 0 15px;
+    }
+
+    @media screen and (max-width: $tablet) {
+      width: 100%;
+
+      &:nth-child(odd) {
+        margin-right: 0;
+      }
+    }
+
+    @media screen and (max-width: 375px) {
+      padding: 0;
+    }
   }
 
   &__title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     font-size: 31px;
-    line-height: 40px;
+    line-height: 1.3;
     font-weight: 300;
     text-transform: uppercase;
     border-bottom: 1px solid $brown;
     min-height: 80px;
+
+    @media screen and (max-width: $desktop) {
+      font-size: 20px;
+    }
   }
 
   &__sublist {
@@ -213,22 +348,32 @@
 
   &__li {
     list-style-type: disc;
-    font-size: 20px;
     font-weight: 200;
-    padding-bottom: 15px;
+    padding-bottom: 0.5em;
   }
 }
 
 .single-practices {
   &__wrap {
     display: flex;
+    flex-wrap: wrap;
     align-items: stretch;
     justify-content: flex-start;
+    width: 100vw;
   }
 
   &__main {
     width: 71vw;
     padding: 45px;
+
+    @media screen and (max-width: $laptop) {
+      width: 100%;
+      padding: 45px 30px;
+    }
+
+    @media screen and (max-width: $tablet) {
+      padding: 30px 15px;
+    }
   }
 
   &__content {
@@ -237,6 +382,10 @@
     font-weight: 200;
     font-style: italic;
     padding-bottom: 1em;
+
+    @media screen and (max-width: $desktop) {
+      font-size: 22px;
+    }
 
     ul {
       padding: 1em 0;
@@ -253,6 +402,15 @@
     font-size: 32px;
     font-weight: 300;
     padding-bottom: 1em;
+
+    @media screen and (max-width: $laptop) and (min-width: 376px) {
+      font-size: 26px;
+      padding-bottom: 0.5em;
+    }
+
+    @media screen and (max-width: 375px) {
+      font-size: 24px;
+    }
   }
 
   &__arrow {
@@ -265,7 +423,6 @@
 
   &__desc {
     display: none;
-    font-size: 20px;
     font-weight: 200;
     padding-bottom: 1em;
   }
@@ -273,6 +430,12 @@
   &__item.active {
     .single-practices__arrow {
       transform: rotate(180deg);
+    }
+  }
+
+  @media screen and (max-width: $laptop) {
+    .single-practices__item {
+      margin-bottom: 45px;
     }
   }
 }

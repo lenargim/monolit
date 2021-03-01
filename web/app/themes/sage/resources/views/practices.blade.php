@@ -1,11 +1,10 @@
 {{--
-Template Name: Услуги
+Template Name: Практики
 --}}
 
 @extends('layouts.app')
 
 @section('content')
-  @include('partials.banner')
   <div class="practices-content">
     <div class="practices-content__wrap">
       @include('partials.sidebar-practices')
@@ -25,7 +24,8 @@ Template Name: Услуги
           @endphp
           @foreach($practices as $post)
             <a href="{{ the_permalink() }}" class="practices-content__item">
-              <div class="practices-content__logo img"><img src="{{ the_post_thumbnail_url() }}" alt="{{ the_title() }}"></div>
+              <div class="practices-content__logo"><img src="{{ the_post_thumbnail_url() }}" alt="{{ the_title() }}">
+              </div>
               <div class="practices-content__title">{{ the_title() }}</div>
               <div class="practices-content__block">
                 @php
